@@ -902,7 +902,6 @@ ul{
 }
 
 .card-booking-form{
-    width: 60%;
     position: relative;
     display: flex;
     flex-direction: column;
