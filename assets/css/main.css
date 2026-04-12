@@ -1139,7 +1139,7 @@ ul{
     display: flex;
     flex-direction: row;
     gap: 100px 100px;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .banner-home-bottom{

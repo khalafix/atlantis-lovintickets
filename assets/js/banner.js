@@ -1,10 +1,10 @@
 function initBannerSlideshow() {
     var slides = [
-        './assets/images/banner-1.webp',
-        './assets/images/banner-2.webp',
-        './assets/images/banner-3.webp',
-        './assets/images/banner-4.webp',
-        './assets/images/banner-5.webp'
+        './assets/images/bg/bg-01.webp',
+        './assets/images/bg/bg-02.webp',
+        './assets/images/bg/bg-03.webp',
+        './assets/images/bg/bg-04.webp',
+        './assets/images/bg/bg-05.webp'
     ];
 
     var currentSlide = 0;
