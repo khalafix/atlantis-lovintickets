@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog / News - Adelux</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="web icon" href="./assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar-container">
+            <div class="hero-container">
+                <nav class="navbar navbar-expand-xl">
+                    <div class="navbar-nav-container">
+                
+                    <!-- Logo Container -->
+                    <div class="logo-container">
+                        <a class="navbar-brand fw-bold" href="#">
+                            <img src="./assets/images/Adelux-Logo.png" alt="Logo" class="img-fluid">
+                        </a>
+                    </div>
+                
+                    <!-- Nav Link Container -->
+                    <div class="nav-link-container">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Booking Court <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./booking.html">Booking Court</a></li>
+                                        <li><a class="dropdown-item" href="./event.html">Events</a></li>
+                                        <li><a class="dropdown-item" href="./membership.html">Membership</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Pages <i class="fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./service.html">Our Services</a></li>
+                                        <li><a class="dropdown-item" href="./coaching.html">Coaching</a></li>
+                                        <li><a class="dropdown-item" href="./community.html">Community</a></li>
+                                        <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
+                                        <li><a class="dropdown-item" href="./blog.html">Blog</a></li>
+                                        <li><a class="dropdown-item" href="./single-post.html">Single Post</a></li>
+                                        <li><a class="dropdown-item" href="./404-page.html">404 Error</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                
+                    <!-- Navbar Social Container -->
+                    <div class="navbar-cta-container">
+                        <div>
+                            <a href="./contact.html" class="btn btn-accent">
+                                <span class="btn-title">Join The Club</span>
+                                <span class="icon-circle">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Section -->
+    <aside>
+        <div>
+            <div class="sidebar-overlay"></div>
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <img src="./assets/images/Adelux-Black-Logo.png" class="logo" alt="Logo">
+                    </div>
+                    <button class="close-btn"><span>X</span></button>
+                </div>
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li class="sidebar-dropdown">
+                        <div class="dropdown-header">
+                            <a href="#">Booking Court</a>
+                            <button class="sidebar-dropdown-btn"><i class="fa-solid fa-angle-down"></i></button>
+                        </div>
+                        <ul class="sidebar-dropdown-menu">
+                            <li><a href="./booking.html">Booking Court</a></li>
+                            <li><a href="./event.html">Event</a></li>
+                            <li><a href="./membership.html">Membership</a></li>
+                        </ul>
+                    </li>         
+                    <li class="sidebar-dropdown">
+                        <div class="dropdown-header">
+                            <a href="#">Pages</a>
+                            <button class="sidebar-dropdown-btn"><i class="fa-solid fa-angle-down"></i></button>
+                        </div>
+                        <ul class="sidebar-dropdown-menu">
+                            <li><a href="./service.html">Our Services</a></li>
+                            <li><a href="./coaching.html">Coaching</a></li>
+                            <li><a href="./community.html">Community</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./single-post.html">Single Post</a></li>
+                            <li><a href="./404-page.html">404 Error</a></li>
+                        </ul>
+                    </li>   
+                    <li class="below-dropdown"><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Banner Inner Section -->
+        <div class="section-wrapper pb-0">
+            <div class="section-banner-inner banner-inner-blog">
+                <div class="hero-container">
+                    <div class="d-flex flex-column gspace-2 text-center justify-content-center">
+                        <h1 class="secondary-accent">News & Articles</h1>
+                        <nav class="breadcrumb">
+                            <a href="./index.html" class="breadcrumb-item">Home</a>
+                            <span class="breadcrumb-icon">/</span>
+                            <span class="breadcrumb-item recent">Blog</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Page Section -->
+        <div class="section">
+            <div class="hero-container">
+                <div class="post-content-wrapper">
+                    <div class="post-main-content">
+                        <div class="d-flex flex-column gspace-2">
+                            <div class="card card-blog card-blog-post">
+                                <div class="image-container">
+                                    <img src="./assets/images/dummy-img-1920x900.jpg" alt="Blog Image">
+                                </div>
+                                <div class="blog-post-body">
+                                    <div class="d-flex flex-row align-items-center gspace-2">
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-calendar"></i>
+                                            <span class="post-meta-data">June 16, 2025</span>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-folder"></i>
+                                            <span class="post-meta-data">Padel Lifestyle</span>
+                                        </div>
+                                    </div>
+                                    <a href="./single-post.html" class="blog-title">Inside Adelux: Our Latest Club Facilities</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sapien a massa fringilla malesuada. Donec mauris libero, sollicitudin eget elit in, interdum egestas dui. Maecenas facilisis fermentum lorem vitae pretium. Donec ac nunc vehicula, vulputate felis a, eleifend quam.…</p>
+                                </div>
+                            </div>
+                            <div class="card card-blog card-blog-post">
+                                <div class="image-container">
+                                    <img src="./assets/images/dummy-img-1920x900.jpg" alt="Blog Image">
+                                </div>
+                                <div class="blog-post-body">
+                                    <div class="d-flex flex-row align-items-center gspace-2">
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-calendar"></i>
+                                            <span class="post-meta-data">June 16, 2025</span>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-folder"></i>
+                                            <span class="post-meta-data">Training & Technique</span>
+                                        </div>
+                                    </div>
+                                    <a href="./single-post.html" class="blog-title">Top 5 Warm-up Exercises Before Hitting the Court</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sapien a massa fringilla malesuada. Donec mauris libero, sollicitudin eget elit in, interdum egestas dui. Maecenas facilisis fermentum lorem vitae pretium. Donec ac nunc vehicula, vulputate felis a, eleifend quam.…</p>
+                                </div>
+                            </div>
+                            <div class="card card-blog card-blog-post">
+                                <div class="image-container">
+                                    <img src="./assets/images/dummy-img-1920x900.jpg" alt="Blog Image">
+                                </div>
+                                <div class="blog-post-body">
+                                    <div class="d-flex flex-row align-items-center gspace-2">
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-calendar"></i>
+                                            <span class="post-meta-data">June 16, 2025</span>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-folder"></i>
+                                            <span class="post-meta-data">Padel Lifestyle</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="blog-title">How to Choose the Right Padel Racket</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sapien a massa fringilla malesuada. Donec mauris libero, sollicitudin eget elit in, interdum egestas dui. Maecenas facilisis fermentum lorem vitae pretium. Donec ac nunc vehicula, vulputate felis a, eleifend quam.…</p>
+                                </div>
+                            </div>
+                            <div class="card card-blog card-blog-post">
+                                <div class="image-container">
+                                    <img src="./assets/images/dummy-img-1920x900.jpg" alt="Blog Image">
+                                </div>
+                                <div class="blog-post-body">
+                                    <div class="d-flex flex-row align-items-center gspace-2">
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-calendar"></i>
+                                            <span class="post-meta-data">June 16, 2025</span>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center gspace-1">
+                                            <i class="fa-solid fa-folder"></i>
+                                            <span class="post-meta-data">Training & Technique</span>
+                                        </div>
+                                    </div>
+                                    <a href="./single-post.html" class="blog-title">Mastering the Basics: Padel Tips for Beginners</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sapien a massa fringilla malesuada. Donec mauris libero, sollicitudin eget elit in, interdum egestas dui. Maecenas facilisis fermentum lorem vitae pretium. Donec ac nunc vehicula, vulputate felis a, eleifend quam.…</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Sidebar -->
+                    <div class="post-sidebar-wrapper">
+                        <div class="card card-blog-category">
+                            <h3 class="secondary-accent">Category</h3>
+                            <div class="underline-primary-accent"></div>
+                            <ul class="chevron-circle-list">
+                                <li><a href="#">Padel Lifestyle</a></li>
+                                <li><a href="#">Training & Technique</a></li>
+                                <li><a href="#">Event & News</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card card-blog-recent">
+                            <h3 class="secondary-accent">Recent Post</h3>
+                            <div class="underline-primary-accent"></div>
+                        
+                            <div class="recent-post-list">
+                                <div class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <div class="image-container recent-post-image">
+                                            <img src="./assets/images/dummy-img-600x600.jpg" alt="Recent Post" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="recent-post-body">
+                                        <div class="recent-post-meta">
+                                            <i class="fa-solid fa-calendar accent-color-2"></i>
+                                            <span class="meta-data">16 Jun 2025</span>
+                                        </div>
+                                        <a href="./single-post.html" class="recent-post-title">Why Joining a Padel Community Matters</a>
+                                    </div>
+                                </div>
+                        
+                                <div class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <div class="image-container recent-post-image">
+                                            <img src="./assets/images/dummy-img-600x600.jpg" alt="Recent Post" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="recent-post-body">
+                                        <div class="recent-post-meta">
+                                            <i class="fa-solid fa-calendar accent-color-2"></i>
+                                            <span class="meta-data">16 Jun 2025</span>
+                                        </div>
+                                        <a href="./single-post.html" class="recent-post-title">Booking Courts Online: Quick & Easy Guide</a>
+                                    </div>
+                                </div>
+                        
+                                <div class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <div class="image-container recent-post-image">
+                                            <img src="./assets/images/dummy-img-600x600.jpg" alt="Recent Post" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="recent-post-body">
+                                        <div class="recent-post-meta">
+                                            <i class="fa-solid fa-calendar accent-color-2"></i>
+                                            <span class="meta-data">16 Jun 2025</span>
+                                        </div>
+                                        <a href="./single-post.html" class="recent-post-title">Recap: Adelux Spring Tournament 2025</a>
+                                    </div>
+                                </div>
+                        
+                                <div class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <div class="image-container recent-post-image">
+                                            <img src="./assets/images/dummy-img-600x600.jpg" alt="Recent Post" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="recent-post-body">
+                                        <div class="recent-post-meta">
+                                            <i class="fa-solid fa-calendar accent-color-2"></i>
+                                            <span class="meta-data">16 Jun 2025</span>
+                                        </div>
+                                        <a href="./single-post.html" class="recent-post-title">Improve Your Padel Like a Pro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-blog-tag">
+                            <h3 class="secondary-accent">Tags</h3>
+                            <div class="underline-primary-accent"></div>
+                            <div class="blog-tag-container animate-box animate__animated animated" data-animate="animate__fadeInLeft">
+                                <!-- You can change <span> to <a href="service.html"> if you want tags to be clickable -->
+                                <span class="blog-tag">Padel Tips</span>
+                                <span class="blog-tag">Court Boooking</span>
+                                <span class="blog-tag">Fitness Goals</span>
+                                <span class="blog-tag">Game Strategy</span>
+                                <span class="blog-tag">Club News</span>
+                                <span class="blog-tag">Padel Events</span>
+                                <span class="blog-tag">Beginner Guide</span>
+                                <span class="blog-tag">Team Play</span>
+                                <span class="blog-tag">Community Life</span>
+                            </div>
+                        </div>
+                        <div class="card card-contact-cta cta-small-banner">
+                            <h3 class="primary-accent">Want More Tips & Updates?</h3>
+                            <p class="primary-accent">Join our newsletter and stay updated with the latest padel articles, exclusive offers, and club events.</p>
+                            <a href="contact.html" class="cta-link">
+                                <span>Subscribe Now</span>
+                                <i class="fa-solid fa-chevron-circle-right"></i>
+                            </a>
+                            <div class="cta-image">
+                                <div class="cta-image-container">
+                                    <img src="./assets/images/dummy-img-600x800.jpg" alt="Contact CTA">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="section pb-0 bg-accent-color">
+            <div class="hero-container">
+                <div class="footer-content-container">
+                    <div class="row row-cols-xl-4 row-cols-md-2 row-cols-1 grid-spacer-2">
+                        <div class="col">
+                            <div class="d-flex flex-column gspace-2">
+                                <div class="footer-logo-container">
+                                    <img src="./assets/images/Adelux-Logo.png" alt="Logo" class="img-fluid">
+                                </div>
+                                <h4 class="secondary-accent">Adelux Padel Club & Academy</h4>
+                                <p class="secondary-accent">Experience the future of padel through modern courts, expert coaching, and an inclusive community.</p>
+                                <div class="footer-social-icon">
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-tiktok"></i>
+                                    </a>
+                                    <a href="#" class="social-icon">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column gspace-2">
+                                <h4 class="secondary-accent">Quick Links</h4>
+                                <div class="underline-primary-accent"></div>
+                                <ul class="chevron-list">
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./community.html">School & Academy</a></li>
+                                    <li><a href="./booking.html">Book a Court</a></li>
+                                    <li><a href="./event.html">Tournament </a></li>
+                                    <li><a href="./blog.html">Our Blog </a></li>
+                                    <li><a href="./contact.html">Contact Us </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column gspace-2">
+                                <h4 class="secondary-accent">Contact Info</h4>
+                                <div class="underline-primary-accent"></div>
+                                <div class="d-flex flex-column gspace-2">
+                                    <div class="d-flex flex-row gspace-2 align-items-start">
+                                        <div>
+                                            <div class="contact-icon footer-icon">
+                                                <i class="fa-solid fa-phone-volume"></i>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="contact-info-heading">Phone Number</h6>
+                                            <h5 class="secondary-accent">+1 (800) 123-4567</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row gspace-1 align-items-start">
+                                        <div>
+                                            <div class="contact-icon footer-icon">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="contact-info-heading">Email Address</h6>
+                                            <h5 class="secondary-accent">hello@adeluxpadel.com</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row gspace-1 align-items-start">
+                                        <div>
+                                            <div class="contact-icon footer-icon">
+                                                <i class="fa-solid fa-map-location-dot"></i>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="contact-info-heading">Location</h6>
+                                            <h5 class="secondary-accent">Adelux Padel Center, 123 Avenue Court, New York, NY</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column gspace-2">
+                                <h4 class="secondary-accent">Subscribe Newsletter</h4>
+                                <div class="underline-primary-accent"></div>
+                                <p class="secondary-accent">Get the latest updates on tournaments, promotions & padel tips.</p>
+                                <div id="newsletter-success" class="alert success hidden">
+                                    <span class="check-icon"><i class="fa-solid fa-2xl fa-check"></i></span>
+                                    <p class="text-center">Thank you! Form submitted successfully.</p>
+                                </div>
+                            
+                                <div id="newsletter-error" class="alert error hidden">
+                                    <span class="cross-icon"><i class="fa-solid fa-2xl fa-xmark"></i></span>
+                                    <p class="text-center">Oops! Form submission failed. Please try again.</p>
+                                </div>
+                                <form id="newsletter-form" action="./assets/php/form-newsletter.php" class="form" method="post">
+                                    <input type="email" id="newsletter" name="newsletter" placeholder="Subscribe to Our Newsletter">
+                                    <button type="submit" class="btn btn-accent">
+                                        <span class="btn-title">Subscribe Now</span>
+                                        <span class="icon-circle">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright-container">
+                        <div class="footer-legalink-container">
+                            <a href="#" class="legalink">Privacy Policy</a>
+                            <div class="divider"></div>
+                            <a href="#" class="legalink">Terms & Conditions</a>
+                        </div>
+
+                        <h6 class="secondary-accent mb-0">© 2025 Adelux Padel Club. All rights reserved.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/vendor/jquery.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="./assets/js/vendor/flatpickr.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/submit-form.js"></script>
+    <script src="./assets/js/swiper-script.js"></script>
+</body>
+</html>
