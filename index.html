@@ -215,10 +215,12 @@
                         <div class="academy-video-section">
                             <div class="academy-video-container">
                                 <div class="academy-video-wrapper">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/sh5uMmHmvos?autoplay=1&mute=1&loop=1&playlist=sh5uMmHmvos&controls=0&modestbranding=1&rel=0&showinfo=0"
-                                        title="Academy Introduction Video" allow="autoplay; encrypted-media"
-                                        allowfullscreen></iframe>
+
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/FCASDszNaQw?si=gFUjda1JUrZeIxbf&amp;start=245&autoplay=1&mute=1&loop=1"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     <div class="video-overlay"></div>
                                 </div>
                             </div>
@@ -687,19 +689,9 @@
         <!-- Padel Booking Section -->
         <div class="section pt-0">
             <div class="hero-container">
-                <div class="booking-content-wrapper">
-                    <div class="booking-highlight-container">
-                        <div class="booking-tag-container animate-box animate__animated animated"
-                            data-animate="animate__fadeInLeft">
-                            <!-- You can change <span> to <a href="service.html"> if you want tags to be clickable -->
-                            <span class="booking-tag">Indoor & Outdoor</span>
-                            <span class="booking-tag">Real-Time Slot</span>
-                            <span class="booking-tag bg-accent-color secondary-accent">No Membership</span>
-                            <span class="booking-tag">Flexible Hours</span>
-                            <span class="booking-tag">Instant Access</span>
-                            <span class="booking-tag">Easy Booking</span>
-                            <span class="booking-tag">Night Play</span>
-                        </div>
+                <div class="booking-form-wrapper">
+                    <div class="booking-form-detail">
+
                         <div class="overflow-hidden">
                             <div class="swiper swiperbooking animate-box animate__animated animated-delay-slow"
                                 data-animate="animate__fadeInLeft">
@@ -738,140 +730,75 @@
                             </div>
                         </div>
                     </div>
-                    <div class="booking-content-container">
-                        <div class="d-flex flex-column justify-content-center justify-content-md-start text-center text-md-start gspace-2 animate-box animate__animated animated"
-                            data-animate="animate__fadeInRight">
-                            <div>
-                                <div class="sub-heading">
-                                    <i class="fa-solid fa-circle accent-color-2"></i>
-                                    <span class="sub-heading-title">Booking Court</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="booking-highlight-container">
+
 
                         <!-- Booking Section -->
-                        <div class="section">
-                            <div class="hero-container">
-                                <div class="booking-form-wrapper">
-                                    <div class="card card-booking-form">
-                                        <h3 class="secondary-accent">Book Your Court Now</h3>
-                                        <p class="accent-color-8">Fill in the form to schedule your padel session. Fast,
-                                            secure, and convenient.</p>
-                                        <div class="underline-primary-accent"></div>
 
-                                        <div id="success-message" class="alert success hidden">
-                                            <span class="check-icon"><i class="fa-solid fa-2xl fa-check"></i></span>
-                                            <p>Thank you! Form submitted successfully.</p>
-                                        </div>
+                        <div class="booking-form-wrapper">
+                            <div class="card card-booking-form">
+                                <h3 class="secondary-accent">Book Your Court Now</h3>
+                                <p class="accent-color-8">Fill in the form to schedule your padel session. Fast,
+                                    secure, and convenient.</p>
+                                <div class="underline-primary-accent"></div>
 
-                                        <div id="error-message" class="alert error hidden">
-                                            <span class="cross-icon"><i class="fa-solid fa-2xl fa-xmark"></i></span>
-                                            <p>Oops! Form submission failed. Please try again.</p>
-                                        </div>
+                                <div id="success-message" class="alert success hidden">
+                                    <span class="check-icon"><i class="fa-solid fa-2xl fa-check"></i></span>
+                                    <p>Thank you! Form submitted successfully.</p>
+                                </div>
 
-                                        <form id="booking-form" action="./assets/php/form-booking.php" class="form"
-                                            method="post">
-                                            <div class="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                                                <div class="col">
-                                                    <div class="d-flex flex-column gspace-1">
-                                                        <label for="name">Full Name</label>
-                                                        <input type="text" name="name" id="name"
-                                                            placeholder="Enter your full name">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="d-flex flex-column gspace-1">
-                                                        <label for="email">Email Address</label>
-                                                        <input type="email" name="email" id="email"
-                                                            placeholder="Enter your email address">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                                                <div class="col">
-                                                    <div class="d-flex flex-column gspace-1">
-                                                        <label for="phone">Phone Number</label>
-                                                        <input type="tel" name="phone" id="phone"
-                                                            placeholder="Your Number">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="d-flex flex-column gspace-1">
-                                                        <label for="date">Select Date</label>
-                                                        <input type="text" id="date" name="date"
-                                                            placeholder="Choose you play date" readonly>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                                                <div class="col">
-                                                    <div class="d-flex flex-column gspace-1">
-                                                        <label>Select Time Slot</label>
-                                                        <div class="dropdown-container">
-                                                            <div class="dropdown-select">
-                                                                <div class="d-flex flex-row align-items-center gap-3">
-                                                                    <span class="selected-text">08:00 - 09:00 AM</span>
-                                                                </div>
-                                                                <i class="fa-solid fa-caret-down"></i>
-                                                            </div>
-                                                            <div class="dropdown-list">
-                                                                <div class="dropdown-option" data-value="male">08:00 -
-                                                                    09:00 AM</div>
-                                                                <div class="dropdown-option" data-value="female">09:00 -
-                                                                    10:00 AM</div>
-                                                                <div class="dropdown-option" data-value="female">04:00 -
-                                                                    05:00 AM</div>
-                                                            </div>
-                                                            <input type="hidden" id="time" name="time"
-                                                                class="dropdown-value">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="d-flex flex-column gspace-1">
-                                                        <label>Court Type</label>
-                                                        <div class="dropdown-container">
-                                                            <div class="dropdown-select">
-                                                                <div class="d-flex flex-row align-items-center gap-3">
-                                                                    <span class="selected-text">Court Type</span>
-                                                                </div>
-                                                                <i class="fa-solid fa-caret-down"></i>
-                                                            </div>
-                                                            <div class="dropdown-list">
-                                                                <div class="dropdown-option" data-value="male">Indoor
-                                                                    Court</div>
-                                                                <div class="dropdown-option" data-value="female">Outdoor
-                                                                    Court</div>
-                                                            </div>
-                                                            <input type="hidden" id="court" name="court"
-                                                                class="dropdown-value">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div id="error-message" class="alert error hidden">
+                                    <span class="cross-icon"><i class="fa-solid fa-2xl fa-xmark"></i></span>
+                                    <p>Oops! Form submission failed. Please try again.</p>
+                                </div>
+
+                                <form id="booking-form" action="./assets/php/form-booking.php" class="form"
+                                    method="post">
+                                    <div class="row row-cols row-cols-1 grid-spacer-2">
+                                        <div class="col">
                                             <div class="d-flex flex-column gspace-1">
-                                                <label for="message">Additional Notes</label>
-                                                <textarea name="message" id="message" rows="4"
-                                                    placeholder="Share any prefrencesor details..."></textarea>
+                                                <label for="name">Full Name</label>
+                                                <input type="text" name="name" id="name"
+                                                    placeholder="Enter your full name">
                                             </div>
+                                        </div>
 
-                                            <div>
-                                                <button type="submit" class="btn btn-accent">
-                                                    <span class="btn-title">Confirm Booking</span>
-                                                    <span class="icon-circle">
-                                                        <i class="fa-solid fa-arrow-right"></i>
-                                                    </span>
-                                                </button>
+                                    </div>
+                                    <div class="row row-cols-md-2 row-cols-1 grid-spacer-2">
+                                        <div class="col">
+                                            <div class="d-flex flex-column gspace-1">
+                                                <label for="email">Email Address</label>
+                                                <input type="email" name="email" id="email"
+                                                    placeholder="Enter your email address">
                                             </div>
-                                        </form>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex flex-column gspace-1">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="tel" name="phone" id="phone" placeholder="Your Number">
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                </div>
+
+                                    <div>
+                                        <button type="submit" class="btn btn-accent">
+                                            <span class="btn-title">Confirm Booking</span>
+                                            <span class="icon-circle">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
 
