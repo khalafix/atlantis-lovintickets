@@ -64,22 +64,23 @@ Version: 1.0.0
 
 /* 02. Global Site Settings */
 
+
 :root{
     --primary: #272727;
     --secondary: #FFFFFF;
     --text-color: #5F5F5F;
     --accent-color: #000000;
-    --accent-color-2: rgb(1, 196, 255);
+    --accent-color-2: #ad72e8;
     --accent-color-3: #F2F2F2;
     --accent-color-4: #FAFAFA;
     --accent-color-5: #E4E4E4;
-    --accent-color-6: rgb(0, 71, 237);
+    --accent-color-6: #280f39;
     --accent-color-7: #D0D0D0;
     --accent-color-8: #C9C1C1;
     --accent-color-9: #8C8C8C14;
     --accent-transparent-white: #FFFFFF00;
-    --accent-transparent-white-2: #FFFFFF14;
-    --accent-transparent-black: #0000005C;
+    --accent-transparent-white-2: #280e3b2e;
+    --accent-transparent-black: #280f3936;
     --accent-transparent-black-2: #00000087;
     --font-family-1: "Montserrat", sans-serif;
     --font-family-2: "Lato", sans-serif;
@@ -87,7 +88,6 @@ Version: 1.0.0
     --animation-slow: 2.25s;
     --animation-fast: 0.75s;
 }
-
 /* 03. Keyframes Animation */
 
 
@@ -131,6 +131,7 @@ body{
     font-family: var(--font-family-2);
     color: var(--primary);
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 h1{
@@ -196,7 +197,7 @@ ul{
 /* 05. Base Section */
 
 .section{
-    padding: 120px 20px 40px 20px;
+    padding: 120px 20px 120px 20px;
 }
 
 .section-banner-inner{
@@ -256,9 +257,6 @@ ul{
     max-width: 1340px;
     margin-left: auto;
     margin-right: auto;
-}
-.hero-container>div{
-    padding-top: 50px;
 }
 
 /* 07. Button Styles */
@@ -902,6 +900,7 @@ ul{
 }
 
 .card-booking-form{
+    width: 60%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1141,7 +1140,7 @@ ul{
     display: flex;
     flex-direction: row;
     gap: 100px 100px;
-    justify-content: end;
+    justify-content: space-between;
 }
 
 .banner-home-bottom{
@@ -2194,7 +2193,7 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 50px 50px;
-    width: 100%;
+    width: 40%;
 }
 
 .booking-benefit-container{
