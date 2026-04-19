@@ -1668,6 +1668,7 @@ ul{
 
 .navbar .logo-container img{
     width: 100%;
+    max-height: 50px;
 }
 
 .navbar .nav-link-container{

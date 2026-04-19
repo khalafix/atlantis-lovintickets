@@ -1,3 +1,11 @@
+/* latin-poetsenone */
+@font-face {
+  font-family: 'PoetsenOne';
+  font-style: Regular;
+  font-weight: 200;
+  src: url() format('woff2');
+  
+}
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
