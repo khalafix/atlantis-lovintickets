@@ -1,6 +1,7 @@
 function initBannerSlideshow() {
     var slides = [
         './assets/images/bg/bg-01.webp',
+        './assets/images/bg/bg-16.webp',
         './assets/images/bg/bg-02.webp',
         './assets/images/bg/bg-03.webp',
         './assets/images/bg/bg-04.webp',
