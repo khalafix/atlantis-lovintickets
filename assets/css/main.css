@@ -87,6 +87,7 @@ Version: 1.0.0
     --animation-normal: 1.25s;
     --animation-slow: 2.25s;
     --animation-fast: 0.75s;
+    --off-plan-color: #b80000;
 }
 /* 03. Keyframes Animation */
 
@@ -244,7 +245,8 @@ ul{
     border-radius: 20px 20px 20px 20px;
     overflow: hidden;
 }
-
+span.off-plan{color:var(--off-plan-color);}
+.ptsa-color{color:#b80000 ;}
 .section-pricing{
     background-color: var(--accent-color);
     border-radius: 20px 20px 20px 20px;
@@ -3468,7 +3470,7 @@ ul{
 }
 
 /* 43. Footer Styles */
-
+footer .secondary-accent a {color:var(--secondary);}
 .footer-content-container{
     display: flex;
     flex-direction: column;
