@@ -383,7 +383,7 @@ span.off-plan{color:var(--off-plan-color);}
     flex-direction: row;
     gap: 20px 20px;
     background-color: var(--accent-transparent-white-2);
-    padding: 8px 20px 8px 8px;
+    padding: 8px 8px 8px 8px;
     position: relative;
     overflow: hidden;
     z-index: 1;
