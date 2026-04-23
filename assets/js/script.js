@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     initCustomDropdown();
     initFlatpickrCalendar();
     initNavLink();
@@ -7,13 +7,13 @@ $(document).ready(function() {
     initCounter();
     initTestimonialSlider();
     initAnimateData();
-    initSubmitBooking(); 
+    initSubmitBooking();
     initSubmitForm();
     initSubmitNewsletter();
 });
 
 function initCustomDropdown() {
-    $('.dropdown-select').on('click', function(e) {
+    $('.dropdown-select').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         const $container = $(this).closest('.dropdown-container');
@@ -24,7 +24,7 @@ function initCustomDropdown() {
         $caretIcon.toggleClass('rotate');
     });
 
-    $('.dropdown-option').on('click', function(e) {
+    $('.dropdown-option').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         const $option = $(this);
@@ -45,16 +45,16 @@ function initCustomDropdown() {
         console.log('Selected:', selectedValue, selectedText);
     });
 
-    $(document).on('click', function(e) {
+    $(document).on('click', function (e) {
         if (!$(e.target).closest('.dropdown-container').length) {
             $('.dropdown-container').removeClass('active');
             $('.fa-caret-down').removeClass('rotate');
         }
     });
 
-    $('.dropdown-select').on('keydown', function(e) {
+    $('.dropdown-select').on('keydown', function (e) {
         const $container = $(this).closest('.dropdown-container');
-        switch(e.key) {
+        switch (e.key) {
             case 'Enter':
             case ' ':
                 e.preventDefault();
@@ -91,14 +91,14 @@ function initCustomDropdown() {
 
     $('.dropdown-option').attr('tabindex', '0');
 
-    $('.dropdown-option').on('keydown', function(e) {
+    $('.dropdown-option').on('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             $(this).click();
         }
     });
 
-    window.resetDropdown = function(containerId) {
+    window.resetDropdown = function (containerId) {
         const $container = $('#' + containerId);
         if ($container.length) {
             $container.find('.selected-text').text('Services').removeClass('has-value');
@@ -109,18 +109,39 @@ function initCustomDropdown() {
         }
     };
 
-    window.getDropdownValue = function(containerId) {
+    window.getDropdownValue = function (containerId) {
         const $container = $('#' + containerId);
         return $container.find('.dropdown-value').val();
     };
 
-    window.setDropdownValue = function(containerId, value) {
+    window.setDropdownValue = function (containerId, value) {
         const $container = $('#' + containerId);
         const $option = $container.find('.dropdown-option[data-value="' + value + '"]');
         if ($option.length) {
             $option.click();
         }
     };
+    window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar-container");
+
+        if (window.scrollY > 120) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        window.scrollTo({
+            top: target.offsetTop - 100, // offset navbar
+            behavior: "smooth"
+        });
+    });
+});
 }
 
 function initFlatpickrCalendar() {
@@ -150,7 +171,7 @@ function initCounter() {
             } else {
                 $counter.text(nextCount + "+");
             }
-            setTimeout(function() {
+            setTimeout(function () {
                 updateCount($counter);
             }, delay);
         } else {
@@ -162,8 +183,8 @@ function initCounter() {
         }
     }
 
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting && !$(entry.target).data('counted')) {
                 var $counter = $(entry.target);
                 $counter.data('counted', true);
@@ -174,7 +195,7 @@ function initCounter() {
         threshold: 0.5
     });
 
-    $counters.each(function() {
+    $counters.each(function () {
         var $counter = $(this);
         $counter.data('counted', false);
         observer.observe(this);
@@ -194,27 +215,27 @@ function initTestimonialSlider() {
     function updateSlider() {
         $slider.css("transform", "translateX(-" + (currentIndex * 100) + "%)");
 
-        $slides.each(function(i) {
+        $slides.each(function (i) {
             $(this).toggleClass("active", i === currentIndex);
         });
 
-        $navButtons.each(function(i) {
+        $navButtons.each(function (i) {
             $(this).toggleClass("active", i === currentIndex);
         });
     }
 
-    $nextBtn.on("click", function() {
+    $nextBtn.on("click", function () {
         currentIndex = (currentIndex + 1) % totalSlides;
         updateSlider();
     });
 
-    $prevBtn.on("click", function() {
+    $prevBtn.on("click", function () {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         updateSlider();
     });
 
-    $navButtons.each(function(index) {
-        $(this).on("click", function() {
+    $navButtons.each(function (index) {
+        $(this).on("click", function () {
             currentIndex = index;
             updateSlider();
         });
@@ -223,7 +244,7 @@ function initTestimonialSlider() {
     updateSlider();
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     initTestimonialSlider();
 });
 
@@ -231,7 +252,7 @@ function initTabButton() {
     var $buttons = $(".tab-btn");
     var $panes = $(".tab-pane");
 
-    $buttons.on("click", function() {
+    $buttons.on("click", function () {
         $buttons.removeClass("active");
         $(this).addClass("active");
 
@@ -241,18 +262,18 @@ function initTabButton() {
     });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     initTabButton();
 });
 
 function initNavLink() {
     const currentUrl = window.location.href;
-    $(".navbar-nav .nav-link").each(function() {
+    $(".navbar-nav .nav-link").each(function () {
         if (this.href === currentUrl) {
             $(this).addClass("active");
         }
     });
-    $(".navbar-nav .dropdown-menu .dropdown-item").each(function() {
+    $(".navbar-nav .dropdown-menu .dropdown-item").each(function () {
         if (this.href === currentUrl) {
             $(this).addClass("active");
             $(this).closest(".dropdown").find(".nav-link.dropdown-toggle").addClass("active");
@@ -265,26 +286,26 @@ function initSidebar() {
     const $closeBtn = $('.close-btn');
     const $overlay = $('.sidebar-overlay');
     const $sidebar = $('.sidebar');
-  
-    $menuBtn.click(function() {
-      $overlay.addClass('active');
-      setTimeout(() => {
-        $sidebar.addClass('active');
-      }, 200);
+
+    $menuBtn.click(function () {
+        $overlay.addClass('active');
+        setTimeout(() => {
+            $sidebar.addClass('active');
+        }, 200);
     });
-  
-    $closeBtn.click(function() {
-      $sidebar.removeClass('active');
-      setTimeout(() => {
-        $overlay.removeClass('active');
-      }, 200);
+
+    $closeBtn.click(function () {
+        $sidebar.removeClass('active');
+        setTimeout(() => {
+            $overlay.removeClass('active');
+        }, 200);
     });
-  
-    $overlay.click(function() {
-      $sidebar.removeClass('active');
-      setTimeout(() => {
-        $overlay.removeClass('active');
-      }, 200);
+
+    $overlay.click(function () {
+        $sidebar.removeClass('active');
+        setTimeout(() => {
+            $overlay.removeClass('active');
+        }, 200);
     });
 }
 
@@ -294,14 +315,14 @@ function initEditSidebar() {
     const $overlay = $('.content-overlay');
     const $sidebar = $('.content-edit-sidebar');
 
-    $contentBtn.click(function() {
+    $contentBtn.click(function () {
         $sidebar.addClass('active');
         setTimeout(() => {
-            $overlay.addClass('active');    
+            $overlay.addClass('active');
         }, 200);
     });
 
-    $closeBtn.click(function() {
+    $closeBtn.click(function () {
         $sidebar.removeClass('active');
         setTimeout(() => {
             $overlay.removeClass('active');
@@ -312,8 +333,8 @@ function initEditSidebar() {
 function initSidebarDropdown() {
     const $dropdownButtons = $(".sidebar-dropdown-btn");
 
-    $dropdownButtons.each(function() {
-        $(this).on("click", function() {
+    $dropdownButtons.each(function () {
+        $(this).on("click", function () {
             const $dropdownMenu = $(this).parent().next(".sidebar-dropdown-menu");
             const isOpen = $dropdownMenu.hasClass("active");
 
@@ -341,7 +362,7 @@ function initAnimateData() {
     }, {
         threshold: 0.1
     });
-    $elements.each(function() {
+    $elements.each(function () {
         observer.observe(this);
     });
 }

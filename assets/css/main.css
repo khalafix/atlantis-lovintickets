@@ -126,6 +126,7 @@ Version: 1.0.0
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -135,6 +136,9 @@ body{
     overflow-x: hidden;
 }
 
+section ,#about-us {
+    scroll-margin-top: 120px; /* ارتفاع navbar */
+}
 h1{
     font-size: 90px;
     font-weight: 700;
@@ -259,8 +263,16 @@ span.off-plan{color:var(--off-plan-color);}
     max-width: 1340px;
     margin-left: auto;
     margin-right: auto;
-}
+    transform: scaleX(0.92);
+    transition: all 0.8s ease;
 
+    
+}
+.navbar-container.scrolled .hero-container{
+    width: calc(100% - 55px) !important;
+    max-width: none !important;
+     transform: scaleX(1);
+}
 /* 07. Button Styles */
 
 .btn{
@@ -1660,12 +1672,34 @@ span.off-plan{color:var(--off-plan-color);}
     width: 100%;
     padding: 20px 20px 20px 20px;
 }
+.navbar-container.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
 
+    /* animation: slideDown 0.4s ease; */
+}
+.navbar-container.scrolled .navbar-nav-container {
+    padding: 15px 40px;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .navbar .logo-container{
     width: 18%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .navbar .logo-container img{
