@@ -130,18 +130,35 @@ function initCustomDropdown() {
             navbar.classList.remove("scrolled");
         }
     });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
 
-        const target = document.querySelector(this.getAttribute("href"));
+    window.addEventListener("scroll", () => {
 
-        window.scrollTo({
-            top: target.offsetTop - 100, // offset navbar
-            behavior: "smooth"
+        let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+        sections.forEach(section => {
+
+            const top = section.offsetTop - 130;
+            const bottom = top + section.offsetHeight;
+            const id = section.getAttribute("id");
+
+            if (scrollPos >= top && scrollPos < bottom) {
+
+                // ❗ پاک کردن active از همه
+                navLinks.forEach(link => link.classList.remove("active"));
+
+                // ❗ پیدا کردن لینک درست (safe version)
+                const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+                console.log("ACTIVE SECTION:", id, activeLink); // 🔥 دیباگ
+
+                if (activeLink) {
+                    activeLink.classList.add("active");
+                }
+            }
         });
     });
-});
 }
 
 function initFlatpickrCalendar() {
